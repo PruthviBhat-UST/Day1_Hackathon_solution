@@ -1,0 +1,16 @@
+overview : 
+            Every website must have the SSL certificate, and it will be valid till some time, in order to inform the 
+            owner about the SSL, we will create the shell scripting in which we will log the SSL certificate expiry date
+            (last 5 days remaining) and mail them using MTA postfix.
+
+implementation steps :
+1) create a file
+2) grant execute permission to files using chmod +x
+3) use the openssl utlity library and get the info from the domain
+4) implement the extraction of date from that info into proper strctured date format
+5) check the condition whether the given date is nearer( 5 days) from the expiry by comapring it with today's date
+6) if so then send an email to the owner saying that certificate is about to expire. using postfix MTA
+
+outcome:
+        the owner will be able to get to know their ssl certificate expiry and take proper actions without continous human 
+        observation rather than manually checking the expiry date daily.
